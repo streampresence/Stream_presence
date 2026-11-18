@@ -33,6 +33,14 @@ exists for it.)
 
 ## Notes
 
+- Branding (2026-11-18): the header logo and favicon are embedded in
+  `index.html` as base64 data URIs because the GitHub connector's
+  push-files is string-only and cannot push binary files. The staged
+  binary assets (`assets/logo.png`, `favicon.ico`,
+  `apple-touch-icon.png`, `icon-navy.png`) stay on disk locally; the
+  apple-touch-icon link and the og:image meta are omitted from
+  `index.html` until a binary-capable push can land those files as
+  real files in the repo.
 - Copy ruled by Johnny 2026-11-18: tagline "Receipts for the agent
   economy" (hero headline + agents.md descriptor); hero blurb and
   the Private Deployment intro blurb (Johnny's own opening) set
